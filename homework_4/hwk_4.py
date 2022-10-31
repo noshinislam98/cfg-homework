@@ -6,18 +6,15 @@ matrix = [
     [99, 100, 103, 106, 128, 1004]
 ]
 
-target = 4
+target = 1003
 
 
 def search_in_matrix(matrix, target):
-    result = []
     for row in range(len(matrix)):
         for column in range(len(matrix[row])):
             if matrix[row][column] == target:
-                result = [row, column]
-            else:
-                result = [-1, -1]
-    return result
+                return [row, column]
+    return [-1, -1]
 
 
 print(search_in_matrix(matrix, target))
